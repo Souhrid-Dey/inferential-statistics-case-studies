@@ -1,0 +1,66 @@
+# =====================================================================
+# Institute-Provided Proprietary Documents (NOT for public sharing)
+# =====================================================================
+# These files are institute-copyrighted materials.
+# The sample solution explicitly states it is for personal use only
+# and sharing is liable for legal action.
+
+Sample Solution - IS Project - Coded.pdf
+Business Report - Do's and Don'ts v1_0 PGP-DS.pdf
+Data to Insights to Reporting v1_0 PGP-DS.pdf
+Students Evaluation Guidelines v1_0 PGP-DS.pdf
+
+# Original files kept locally at root (renamed copies in subdirs are committed)
+/Souhrid Dey - Statistics project.ipynb
+/Souhrid Dey - Statistics Business Report.pdf
+/ISfDS.docx
+/Problem Statement.md
+/Zingaro_Company.csv
+/Dental Hardness data.xlsx
+
+# =====================================================================
+# Jupyter Notebook Artifacts
+# =====================================================================
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# =====================================================================
+# Python
+# =====================================================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# =====================================================================
+# OS / Editor Artifacts
+# =====================================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.code-workspace
+
+# =====================================================================
+# Scratch / Temp Files
+# =====================================================================
+scratch/
+tmp/
+temp/
+*.tmp
+*.log

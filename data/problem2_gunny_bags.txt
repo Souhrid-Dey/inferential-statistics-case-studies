@@ -1,0 +1,35 @@
+# Problem 2 — Cement Packaging (Gunny Bags): Data Description
+# =============================================================
+# Source: Given directly in the problem statement as distributional parameters.
+# No raw dataset file was provided. Analysis uses the Normal Distribution
+# with the given population parameters.
+
+# POPULATION PARAMETERS:
+# ----------------------
+# Variable       : Breaking strength of gunny bags used for packaging cement
+# Units          : kg per sq. centimeter (kg/cm²)
+# Distribution   : Normal (Gaussian)
+# Mean (μ)       : 5 kg/cm²
+# Std. Dev. (σ)  : 1.5 kg/cm²
+
+# ANALYSIS QUESTIONS (using scipy.stats.norm):
+# --------------------------------------------
+# 2.1  P(Breaking Strength < 3.17)?
+#      Z = (3.17 - 5) / 1.5 = -1.22
+#      Answer: P ≈ 0.1112 (11.12%)
+
+# 2.2  P(Breaking Strength ≥ 3.6)?
+#      Z = (3.6 - 5) / 1.5 = -0.933
+#      Answer: 1 - CDF(3.6) ≈ 0.8247 (82.47%)
+
+# 2.3  P(5 ≤ Breaking Strength ≤ 5.5)?
+#      Answer: CDF(5.5) - CDF(5) ≈ 0.6306 - 0.5 = 0.1306 (13.06%)
+
+# 2.4  P(Breaking Strength NOT between 3 and 7.5)?
+#      Answer: P(X < 3) + P(X > 7.5)
+#            = CDF(3) + [1 - CDF(7.5)]
+#            ≈ 0.0912 + 0.0478 = 0.1390 (13.90%)
+
+# NOTE: Since only population parameters are given (not sample data),
+#       confidence interval estimation is not applicable here.
+#       All calculations use the theoretical Normal CDF directly.

@@ -1,0 +1,30 @@
+# Problem 1 — Football Injuries: Data Description
+# =================================================
+# Source: Given directly in the problem statement (contingency table).
+# No separate raw data file was provided for this problem.
+# The data is a pre-aggregated contingency table.
+
+# CONTINGENCY TABLE: Football Player Injuries by Position
+# -------------------------------------------------------
+# Context: A physiotherapist with a male football team studied the relationship
+#           between foot injuries and the positions at which players play.
+
+#                  | Striker | Forward | Attacking Midfielder | Winger | TOTAL |
+# -------------------------------------------------------------------------------
+# Players Injured  |   45    |   56    |          24          |   20   |  145  |
+# Players Not Inj. |   32    |   38    |          11          |    9   |   90  |
+# TOTAL            |   77    |   94    |          35          |   29   |  235  |
+# -------------------------------------------------------------------------------
+
+# ANALYSIS QUESTIONS:
+# 1.1  P(randomly chosen player suffers an injury)?
+#      Answer: 145/235 = 0.617 (61.7%)
+
+# 1.2  P(player is a Forward OR a Winger)?
+#      Answer: (94+29)/235 = 123/235 = 0.523 (52.3%)
+
+# 1.3  P(randomly chosen player plays Striker AND has a foot injury)?
+#      Answer: 45/235 = 0.191 (19.1%)
+
+# 1.4  P(randomly chosen injured player is a Striker)?
+#      Conditional probability: P(Striker | Injured) = 45/145 = 0.310 (31.0%)

@@ -9,6 +9,10 @@
 > **Part of PGP in Data Science (2025) — Inferential Statistics module.**  
 > Four real-world business problems solved using probability theory, normal distribution analysis, hypothesis testing, and ANOVA. Scored **60/60**.
 
+<p align="center">
+  <img src="images/social_preview.jpg" alt="Inferential Statistics Case Studies Banner" width="100%" />
+</p>
+
 ---
 
 ## 📋 Table of Contents

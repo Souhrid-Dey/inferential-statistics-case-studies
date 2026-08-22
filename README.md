@@ -10,7 +10,7 @@
 > Four real-world business problems solved using probability theory, normal distribution analysis, hypothesis testing, and ANOVA. Scored **60/60**.
 
 <p align="center">
-  <img src="images/social_preview.jpg" alt="Inferential Statistics Case Studies Banner" width="100%" />
+  <img src="reports/figures/social_preview.jpg" alt="Inferential Statistics Case Studies Banner" width="100%" />
 </p>
 
 ---
@@ -47,6 +47,39 @@ The deliverables are:
 
 ## 📁 Case Studies Overview
 
+## 🔬 Statistical Methodology & Pipeline
+
+```mermaid
+flowchart TD
+    subgraph P1["Problem 1: Football Injury Analysis"]
+        A1[Contingency Matrix: Position vs Injury] --> B1[Joint Probability: P Striker AND Injured]
+        B1 --> C1[Marginal Probability: P Forward OR Winger]
+        C1 --> D1[Conditional Probability: P Striker | Injured]
+    end
+
+    subgraph P2["Problem 2: Gunny Bag Breaking Strength"]
+        A2[Distribution: Normal mu=5.0, sigma=1.5] --> B2[Z-Score Calculation & CDF Evaluation]
+        B2 --> C2[Defect Probability: P Strength < 3.17 kg/cm2]
+        C2 --> D2[Target Operational Range: P 3.0 to 7.5 kg/cm2]
+    end
+
+    subgraph P3["Problem 3: Zingaro Stone Printing"]
+        A3[Batch Hardness Samples: 76 Observations] --> B3[Shapiro-Wilk Normality Verification]
+        B3 --> C3[One-Sample t-Test: H0 mu >= 150 BHI]
+        C3 --> D3[Two-Sample Welch t-Test: Polished vs Unpolished]
+    end
+
+    subgraph P4["Problem 4: Dental Implant Hardness"]
+        A4[Factorial Experiment: 90 Observations] --> B4[One-Way ANOVA: Dentist & Method Effects]
+        B4 --> C4[Two-Way ANOVA: Dentist x Method Interaction]
+        C4 --> D4[Tukey HSD Post-Hoc: Pairwise Contrasts across Alloys]
+    end
+
+    P1 & P2 & P3 & P4 --> E[Statistical Synthesis & Business Recommendations]
+```
+
+---
+
 ### Problem 1 — Football Player Injuries (Probability)
 
 **Business Context:** A physiotherapist wants to understand the risk of foot injuries by player position in a male football team (235 players).
@@ -61,7 +94,7 @@ The deliverables are:
 | P(Striker \| Injured) | **31.0%** |
 
 <p align="center">
-  <img src="images/p1_injury_annotated_bar.png" alt="Football Injuries by Position" width="75%"/>
+  <img src="reports/figures/p1_injury_annotated_bar.png" alt="Football Injuries by Position" width="75%"/>
 </p>
 
 **Key Finding:** Strikers and Forwards bear the highest injury burden. Targeted prevention programs for these positions are recommended.
@@ -84,7 +117,7 @@ The deliverables are:
 | P(strength NOT between 3 and 7.5) | **13.9%** |
 
 <p align="center">
-  <img src="images/p2_normal_dist_overview.png" alt="Normal Distribution Analysis" width="75%"/>
+  <img src="reports/figures/p2_normal_dist_overview.png" alt="Normal Distribution Analysis" width="75%"/>
 </p>
 
 **Key Finding:** ~11% of bags fall below safe breaking strength. Strengthening supplier specifications and implementing incoming quality control (IQC) is recommended.
@@ -105,7 +138,7 @@ The deliverables are:
 | 3.2: Equal mean hardness? | μ_polished = μ_unpolished | **Rejected** (p < 0.05) | Hardness is significantly different |
 
 <p align="center">
-  <img src="images/p3_zingaro_boxplot.png" alt="Zingaro Stone Hardness Distribution" width="70%"/>
+  <img src="reports/figures/p3_zingaro_boxplot.png" alt="Zingaro Stone Hardness Distribution" width="70%"/>
 </p>
 
 **Key Finding:** Zingaro is justified in rejecting unpolished stone batches. Separate QA protocols for polished vs. unpolished materials are recommended.
@@ -132,7 +165,7 @@ The deliverables are:
 Post-hoc (Tukey HSD): **Method 3 is significantly different** from Methods 1 & 2 for both alloys.
 
 <p align="center">
-  <img src="images/p4_qq_plots_alloy2.png" alt="Normality Check — Alloy 2" width="75%"/>
+  <img src="reports/figures/p4_qq_plots_alloy2.png" alt="Normality Check — Alloy 2" width="75%"/>
 </p>
 
 **Key Finding:** Implantation method is the primary driver of hardness variation. Method 3 consistently underperforms. Dentist-method pairing protocols should be standardized, especially for Alloy 1.
@@ -161,11 +194,15 @@ inferential-statistics-case-studies/
 │   ├── business_report.pdf            # Submitted business report (65 pages)
 │   └── business_report.docx           # Editable source
 │
-├── images/                            # All generated plots (18 figures)
-│   ├── p1_*.png                       # Problem 1 visuals
-│   ├── p2_*.png                       # Problem 2 visuals
-│   ├── p3_*.png                       # Problem 3 visuals
-│   └── p4_*.png                       # Problem 4 visuals
+└── reports/
+    ├── business_report.pdf            # Submitted business report (65 pages)
+    ├── business_report.docx           # Editable source
+    └── figures/                       # 18 generated figures + social preview
+        ├── p1_*.png                   # Problem 1 visuals
+        ├── p2_*.png                   # Problem 2 visuals
+        ├── p3_*.png                   # Problem 3 visuals
+        ├── p4_*.png                   # Problem 4 visuals
+        └── social_preview.jpg
 │
 └── docs/
     └── problem_statement.md           # Problem statements, rubric & scores
